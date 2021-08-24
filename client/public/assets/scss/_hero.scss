@@ -2,7 +2,6 @@
     Hero Area CSS
 ========================================*/
 .hero-area {
-    background-image: url('https://via.placeholder.com/2100x1280');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -20,7 +19,7 @@
     &.style2 {
         padding-top: 150px;
         padding-bottom: 100px;
-        background-image: url('https://via.placeholder.com/2100x1280');
+        
 
         .hero-text {
             text-align: left;
@@ -41,7 +40,7 @@
     &.style3 {
         padding-top: 250px;
         padding-bottom: 0;
-        background-image: url('https://via.placeholder.com/2100x1280');
+       
 
         .search-form {
             margin-top: 100px;

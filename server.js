@@ -4,12 +4,16 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 const cors = require("cors");
-const { PORT } = require('./config')
+const ads = require('./routes/ads');
+const auth = require('./routes/auth');
+const cookieParser = require('cookie-parser');
+const errorHandler = require('./middleware/error');
+const { cloudinaryConfig  } = require('./middleware/cloudinary')
 
-const connectDB = require("./database/db.js");
+const connectDB = require("./database/db");
 
 //load env variables
-dotenv.config();
+dotenv.config({path: __dirname + '/.env' });
 
 //connect to database
 connectDB();
@@ -22,8 +26,13 @@ app.use(helmet());
 
 app.use(cors());
 
+app.use(cookieParser());
+
 //Body parser
 app.use(express.json());
+
+// error handler
+app.use(errorHandler);
 
 
 
@@ -32,9 +41,13 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-const port = PORT || 5000;
+app.use('*', cloudinaryConfig);
+app.use('/api/ads', ads);
+app.use('/api/auth', auth);
 
-if (process.env.NODE_ENV == 'production') {
+const port = process.env.PORT || 5000;
+
+if (process.env.NODE_ENV === 'production') {
 
     app.use(express.static('client/dist'));
     app.get('*', (req, res) => {
@@ -55,5 +68,6 @@ process.on("unhandledRejection", (err, promise) => {
   // Close server & exit process
   server.close(() => process.exit(1));
 });
+
 
 

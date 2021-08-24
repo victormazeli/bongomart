@@ -752,7 +752,7 @@
     <!-- End Items Tab Area -->
 
     <!-- Start Items Grid Area -->
-    <div class="items-grid section">
+    <!-- <div class="items-grid section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -765,9 +765,9 @@
             </div>
             <div class="single-head">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-12"> -->
                         <!-- Start Single Grid -->
-                        <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
+                        <!-- <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
                             <div class="image">
                                 <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                                 <div class="author">
@@ -803,12 +803,12 @@
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Grid -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <!-- </div>
+                    <div class="col-lg-4 col-md-6 col-12"> -->
                         <!-- Start Single Grid -->
-                        <div class="single-grid wow fadeInUp" data-wow-delay=".4s">
+                        <!-- <div class="single-grid wow fadeInUp" data-wow-delay=".4s">
                             <div class="image">
                                 <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                                 <div class="author">
@@ -844,12 +844,12 @@
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Grid -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <!-- </div>
+                    <div class="col-lg-4 col-md-6 col-12"> -->
                         <!-- Start Single Grid -->
-                        <div class="single-grid wow fadeInUp" data-wow-delay=".6s">
+                        <!-- <div class="single-grid wow fadeInUp" data-wow-delay=".6s">
                             <div class="image">
                                 <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                                 <div class="author">
@@ -886,12 +886,12 @@
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Grid -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <!-- </div>
+                    <div class="col-lg-4 col-md-6 col-12"> -->
                         <!-- Start Single Grid -->
-                        <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
+                        <!-- <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
                             <div class="image">
                                 <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                                 <div class="author">
@@ -927,12 +927,12 @@
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Grid -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <!-- </div>
+                    <div class="col-lg-4 col-md-6 col-12"> -->
                         <!-- Start Single Grid -->
-                        <div class="single-grid wow fadeInUp" data-wow-delay=".4s">
+                        <!-- <div class="single-grid wow fadeInUp" data-wow-delay=".4s">
                             <div class="image">
                                 <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                                 <div class="author">
@@ -969,12 +969,12 @@
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Grid -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <!-- </div>
+                    <div class="col-lg-4 col-md-6 col-12"> -->
                         <!-- Start Single Grid -->
-                        <div class="single-grid wow fadeInUp" data-wow-delay=".6s">
+                        <!-- <div class="single-grid wow fadeInUp" data-wow-delay=".6s">
                             <div class="image">
                                 <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                                 <div class="author">
@@ -1010,17 +1010,17 @@
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Grid -->
-                    </div>
+                    <!-- </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- /End Items Grid Area -->
 
     <!-- Start Why Choose Area -->
-    <div class="why-choose section">
+    <!-- <div class="why-choose section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -1035,76 +1035,76 @@
                 <div class="col-lg-12">
                     <div class="choose-content">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <div class="col-lg-4 col-md-6 col-12"> -->
                                 <!-- Start Single List -->
-                                <div class="single-list wow fadeInUp" data-wow-delay=".2s">
+                                <!-- <div class="single-list wow fadeInUp" data-wow-delay=".2s">
                                     <i class="lni lni-book"></i>
                                     <h4>Fully Documented</h4>
                                     <p>Buy and sell everything from used cars to mobile phones and computer or search
                                         for property.</p>
-                                </div>
+                                </div> -->
                                 <!-- Start Single List -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <!-- </div>
+                            <div class="col-lg-4 col-md-6 col-12"> -->
                                 <!-- Start Single List -->
-                                <div class="single-list wow fadeInUp" data-wow-delay=".4s">
+                                <!-- <div class="single-list wow fadeInUp" data-wow-delay=".4s">
                                     <i class="lni lni-leaf"></i>
                                     <h4>Clean & Modern Design</h4>
                                     <p>Buy and sell everything from used cars to mobile phones and computer or search
                                         for property.</p>
-                                </div>
+                                </div> -->
                                 <!-- Start Single List -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <!-- </div>
+                            <div class="col-lg-4 col-md-6 col-12"> -->
                                 <!-- Start Single List -->
-                                <div class="single-list wow fadeInUp" data-wow-delay=".6s">
+                                <!-- <div class="single-list wow fadeInUp" data-wow-delay=".6s">
                                     <i class="lni lni-cog"></i>
                                     <h4>Completely Customizable</h4>
                                     <p>Buy and sell everything from used cars to mobile phones and computer or search
                                         for property.</p>
-                                </div>
+                                </div> -->
                                 <!-- Start Single List -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <!-- </div>
+                            <div class="col-lg-4 col-md-6 col-12"> -->
                                 <!-- Start Single List -->
-                                <div class="single-list wow fadeInUp" data-wow-delay=".2s">
+                                <!-- <div class="single-list wow fadeInUp" data-wow-delay=".2s">
                                     <i class="lni lni-pointer-up"></i>
                                     <h4>User Friendly</h4>
                                     <p>Buy and sell everything from used cars to mobile phones and computer or search
                                         for property.</p>
-                                </div>
+                                </div> -->
                                 <!-- Start Single List -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <!-- </div>
+                            <div class="col-lg-4 col-md-6 col-12"> -->
                                 <!-- Start Single List -->
-                                <div class="single-list wow fadeInUp" data-wow-delay=".4s">
+                                <!-- <div class="single-list wow fadeInUp" data-wow-delay=".4s">
                                     <i class="lni lni-layout"></i>
                                     <h4>Awesome Layout</h4>
                                     <p>Buy and sell everything from used cars to mobile phones and computer or search
                                         for property.</p>
-                                </div>
+                                </div> -->
                                 <!-- Start Single List -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <!-- </div>
+                            <div class="col-lg-4 col-md-6 col-12"> -->
                                 <!-- Start Single List -->
-                                <div class="single-list wow fadeInUp" data-wow-delay=".6s">
+                                <!-- <div class="single-list wow fadeInUp" data-wow-delay=".6s">
                                     <i class="lni lni-laptop-phone"></i>
                                     <h4>Fully Responsive</h4>
                                     <p>Buy and sell everything from used cars to mobile phones and computer or search
                                         for property.</p>
-                                </div>
+                                </div> -->
                                 <!-- Start Single List -->
-                            </div>
+                            <!-- </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- /End Why Choose Area -->
 
     <!-- Start Browse Cities Area -->
-    <div class="browse-cities section">
+    <!-- <div class="browse-cities section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -1116,9 +1116,9 @@
                 </div>
             </div>
             <div class="row ">
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12"> -->
                     <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".2s">
+                    <!-- <div class="single-city wow fadeInUp" data-wow-delay=".2s">
                         <a href="category.html" class="info-box">
                             <div class="image">
                                 <img src="https://via.placeholder.com/425x290" alt="#">
@@ -1133,12 +1133,12 @@
                                 <i class="lni lni-circle-plus"></i>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- Start Single City -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <!-- </div>
+                <div class="col-lg-4 col-md-4 col-12"> -->
                     <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".4s">
+                    <!-- <div class="single-city wow fadeInUp" data-wow-delay=".4s">
                         <a href="category.html" class="info-box">
                             <div class="image">
                                 <img src="https://via.placeholder.com/425x290" alt="#">
@@ -1153,12 +1153,12 @@
                                 <i class="lni lni-circle-plus"></i>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- Start Single City -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <!-- </div>
+                <div class="col-lg-4 col-md-4 col-12"> -->
                     <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".6s">
+                    <!-- <div class="single-city wow fadeInUp" data-wow-delay=".6s">
                         <a href="category.html" class="info-box">
                             <div class="image">
                                 <img src="https://via.placeholder.com/425x290" alt="#">
@@ -1173,12 +1173,12 @@
                                 <i class="lni lni-circle-plus"></i>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- Start Single City -->
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
+                <!-- </div>
+                <div class="col-lg-6 col-md-6 col-12"> -->
                     <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".2s">
+                    <!-- <div class="single-city wow fadeInUp" data-wow-delay=".2s">
                         <a href="category.html" class="info-box">
                             <div class="image">
                                 <img src="https://via.placeholder.com/635x325" alt="#">
@@ -1193,12 +1193,12 @@
                                 <i class="lni lni-circle-plus"></i>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- Start Single City -->
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
+                <!-- </div> -->
+                <!-- <div class="col-lg-6 col-md-6 col-12"> -->
                     <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".4s">
+                    <!-- <div class="single-city wow fadeInUp" data-wow-delay=".4s">
                         <a href="category.html" class="info-box">
                             <div class="image">
                                 <img src="https://via.placeholder.com/635x325" alt="#">
@@ -1213,12 +1213,12 @@
                                 <i class="lni lni-circle-plus"></i>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- Start Single City -->
-                </div>
+                <!-- </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- /End Browse Cities Area -->
 
     <!-- Start Call Action Area -->
@@ -1242,7 +1242,7 @@
     <!-- End Call Action Area -->
 
     <!-- Start Pricing Table Area -->
-    <div class="pricing-table section">
+    <!-- <div class="pricing-table section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -1254,100 +1254,100 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12"> -->
                     <!-- Single Table -->
-                    <div class="single-table wow fadeInUp" data-wow-delay=".2s">
+                    <!-- <div class="single-table wow fadeInUp" data-wow-delay=".2s"> -->
                         <!-- Table Head -->
-                        <div class="table-head">
+                        <!-- <div class="table-head">
                             <div class="price">
                                 <h2 class="amount">$00<span class="duration">/ Month</span></h2>
                             </div>
                             <h4 class="title">Free</h4>
-                        </div>
+                        </div> -->
                         <!-- End Table Head -->
                         <!-- Table List -->
-                        <ul class="table-list">
+                        <!-- <ul class="table-list">
                             <li>One Listing</li>
                             <li>Contact Display</li>
                             <li>Image Gallery</li>
                             <li>30 Days Availablity</li>
                             <li>Non-Featured</li>
                             <li>Business Tagline</li>
-                        </ul>
+                        </ul> -->
                         <!-- End Table List -->
                         <!-- Table Bottom -->
-                        <div class="button">
+                        <!-- <div class="button">
                             <a class="btn" href="javascript:void(0)">Select Plan</a>
-                        </div>
+                        </div> -->
                         <!-- End Table Bottom -->
-                    </div>
+                    <!-- </div> -->
                     <!-- End Single Table-->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <!-- </div>
+                <div class="col-lg-4 col-md-6 col-12"> -->
                     <!-- Single Table -->
-                    <div class="single-table wow fadeInUp" data-wow-delay=".4s">
+                    <!-- <div class="single-table wow fadeInUp" data-wow-delay=".4s"> -->
                         <!-- Table Head -->
-                        <div class="table-head">
+                        <!-- <div class="table-head">
                             <div class="price">
                                 <h2 class="amount">$59<span class="duration">/ Month</span></h2>
                             </div>
                             <h4 class="title">Standard</h4>
-                        </div>
+                        </div> -->
                         <!-- End Table Head -->
                         <!-- Table List -->
-                        <ul class="table-list">
+                        <!-- <ul class="table-list">
                             <li>One Listing</li>
                             <li>Contact Display</li>
                             <li>Image Gallery</li>
                             <li>60 Days Availablity</li>
                             <li>Non-Featured</li>
                             <li>Business Tagline</li>
-                        </ul>
+                        </ul> -->
                         <!-- End Table List -->
                         <!-- Table Bottom -->
-                        <div class="button">
+                        <!-- <div class="button">
                             <a class="btn" href="javascript:void(0)">Select Plan</a>
-                        </div>
+                        </div> -->
                         <!-- End Table Bottom -->
-                    </div>
+                    <!-- </div> -->
                     <!-- End Single Table-->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <!-- </div>
+                <div class="col-lg-4 col-md-6 col-12"> -->
                     <!-- Single Table -->
-                    <div class="single-table wow fadeInUp" data-wow-delay=".6s">
-                        <!-- Table Head -->
-                        <div class="table-head">
+                    <!-- <div class="single-table wow fadeInUp" data-wow-delay=".6s">
+                        Table Head -->
+                        <!-- <div class="table-head">
                             <div class="price">
                                 <h2 class="amount">$99<span class="duration">/ Month</span></h2>
                             </div>
                             <h4 class="title">Premium</h4>
-                        </div>
+                        </div> -->
                         <!-- End Table Head -->
                         <!-- Table List -->
-                        <ul class="table-list">
+                        <!-- <ul class="table-list">
                             <li>One Listing</li>
                             <li>Contact Display</li>
                             <li>Image Gallery</li>
                             <li>90 Days Availablity</li>
                             <li>Non-Featured</li>
                             <li>Business Tagline</li>
-                        </ul>
+                        </ul> -->
                         <!-- End Table List -->
                         <!-- Table Bottom -->
-                        <div class="button">
+                        <!-- <div class="button">
                             <a class="btn" href="javascript:void(0)">Select Plan</a>
-                        </div>
+                        </div> -->
                         <!-- End Table Bottom -->
-                    </div>
+                    <!-- </div> -->
                     <!-- End Single Table-->
-                </div>
+                <!-- </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--/ End Pricing Table Area -->
 
     <!-- Start Testimonials Area -->
-    <div class="testimonials section">
+    <!-- <div class="testimonials section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -1359,9 +1359,9 @@
                 </div>
             </div>
             <div class="row testimonial-slider">
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12"> -->
                     <!-- Start Single Testimonial -->
-                    <div class="single-testimonial">
+                    <!-- <div class="single-testimonial">
                         <div class="quote-icon">
                             <i class="lni lni-quotation"></i>
                         </div>
@@ -1377,12 +1377,12 @@
                                 connections. I have the exact same personality, the only thing that has changed is my
                                 mindset and a few behaviors."</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Single Testimonial -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <!-- </div>
+                <div class="col-lg-4 col-md-6 col-12"> -->
                     <!-- Start Single Testimonial -->
-                    <div class="single-testimonial">
+                    <!-- <div class="single-testimonial">
                         <div class="quote-icon">
                             <i class="lni lni-quotation"></i>
                         </div>
@@ -1398,12 +1398,12 @@
                                 connections. I have the exact same personality, the only thing that has changed is my
                                 mindset and a few behaviors."</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Single Testimonial -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <!-- </div>
+                <div class="col-lg-4 col-md-6 col-12"> -->
                     <!-- Start Single Testimonial -->
-                    <div class="single-testimonial">
+                    <!-- <div class="single-testimonial">
                         <div class="quote-icon">
                             <i class="lni lni-quotation"></i>
                         </div>
@@ -1419,12 +1419,12 @@
                                 connections. I have the exact same personality, the only thing that has changed is my
                                 mindset and a few behaviors."</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Single Testimonial -->
-                </div>
+                <!-- </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Testimonial Area -->
 
     <!-- Start How Works Area -->
