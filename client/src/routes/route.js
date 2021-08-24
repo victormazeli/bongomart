@@ -1,9 +1,19 @@
 import Home from '../pages/Home.vue'
-import Dashboard from '../pages/Dashboard.vue'
+import Dashboard from '../pages/users/dashboard.vue'
+import Listings from '../pages/ads/index.vue'
+import PostAd from '../pages/ads/postad.vue'
+import Login from '../pages/auth/Login.vue'
+import Register from '../pages/auth/SignUp.vue'
 
 const routes = [
+
   { path: "/", component: Home, name: "Home" },
-  { path: "/dashboard", component: Dashboard, name: "Dashboard" }
+  { path: "/dashboard", component: Dashboard, name: "Dashboard" },
+  { path: "/listings", component: Listings, name: "Listings" },
+  { path: "/postad", component: PostAd, name: "PostAd" },
+  { path: "/login", component: Login, name: "Login" },
+  { path: "/register", component: Register, name: "Register" },
+
 ]
 
 export default routes

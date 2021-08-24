@@ -9,9 +9,9 @@
                 <div class="col-lg-12">
                     <div class="nav-inner">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
+                            <router-link to="/" class="navbar-brand">
                                 <img src="assets/images/logo/bongo.svg" alt="Logo">
-                            </a>
+                            </router-link>
                             <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +32,14 @@
                                             <li class="nav-item"><a href="index3.html">Home Version 3</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a href="category.html" aria-label="Toggle navigation">Categories</a>
+                                    </li> -->
+                                     <li class="nav-item">
+                                        <!-- <a href="category.html" aria-label="Toggle navigation"></a> -->
+                                        <router-link to="/Listings" aria-label="Toggle navigation">Listings </router-link>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)"
                                             data-bs-toggle="collapse" data-bs-target="#submenu-1-3"
                                             aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -45,8 +49,8 @@
                                             <li class="nav-item"><a href="item-listing-list.html">Ad Listing</a></li>
                                             <li class="nav-item"><a href="item-details.html">Ad Details</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> -->
+                                    <!-- <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)"
                                             data-bs-toggle="collapse" data-bs-target="#submenu-1-4"
                                             aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -90,7 +94,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)"
                                             data-bs-toggle="collapse" data-bs-target="#submenu-1-5"
@@ -109,15 +113,18 @@
                             <div class="login-button">
                                 <ul>
                                     <li>
-                                        <a href="login.html"><i class="lni lni-enter"></i> Login</a>
+                                        <!-- <a href="login.html"> Login</a> -->
+                                        <router-link to="/login" ><i class="lni lni-enter"></i>Login</router-link>
                                     </li>
                                     <li>
-                                        <a href="registration.html"><i class="lni lni-user"></i> Register</a>
+                                        <!-- <a href="registration.html"> Register</a> -->
+                                        <router-link to="/register" ><i class="lni lni-user"></i>Register</router-link>
                                     </li>
                                 </ul>
                             </div>
                             <div class="button header-button">
-                                <a href="post-item.html" class="btn">Post an Ad</a>
+                                <!-- <a href="post-item.html" class="btn">Post an Ad</a> -->
+                                <router-link to="/postad" class="btn">Post an Ad</router-link>
                             </div>
                         </nav> <!-- navbar -->
                     </div>

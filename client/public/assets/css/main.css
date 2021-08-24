@@ -1931,7 +1931,6 @@ ol {
     Hero Area CSS
 ========================================*/
 .hero-area {
-  background-image: url("https://via.placeholder.com/2100x1280");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1950,7 +1949,6 @@ ol {
 .hero-area.style2 {
   padding-top: 150px;
   padding-bottom: 100px;
-  background-image: url("https://via.placeholder.com/2100x1280");
 }
 
 .hero-area.style2 .hero-text {
@@ -1971,7 +1969,6 @@ ol {
 .hero-area.style3 {
   padding-top: 250px;
   padding-bottom: 0;
-  background-image: url("https://via.placeholder.com/2100x1280");
 }
 
 .hero-area.style3 .search-form {
@@ -8564,3 +8561,4 @@ blockquote .shape {
   background: #5830E0;
   border-color: transparent;
 }
+/*# sourceMappingURL=main.css.map */
