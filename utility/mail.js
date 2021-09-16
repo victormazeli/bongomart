@@ -1,10 +1,10 @@
-require('dotenv/config');
+require('dotenv/config').config();
 
 const Mailgun = require("mailgun-js");
 
 const mg = new Mailgun({
-  apiKey: process.env.MAIL_GUN_API_KEY || "f59fbb3738b90a0bf4d8ca508da28242-fa6e84b7-088db376",
-  domain: process.env.MAIL_GUN_API_URL || "mail.bongomart.ng",
+  apiKey: process.env.MAIL_GUN_API_KEY,
+  domain: process.env.MAIL_GUN_API_URL,
 });
 
 // there is an issue here with the keys
