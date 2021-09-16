@@ -1586,8 +1586,15 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-    name: 'Home'
+    name: 'Home',
+    methods: {
+        ...mapActions(['getLatestAds'])
+    },
+    created() {
+        
+    },
     
 }
 </script>

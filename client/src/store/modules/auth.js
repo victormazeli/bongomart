@@ -16,6 +16,7 @@ const getters = {
 
 const actions = {
     logout: ({ commit }) => {
+        firebase.auth().signOut();
         commit('setToken', null);
 
     },
@@ -67,6 +68,11 @@ const actions = {
         )
         .catch(err => console.log(err))
     },
+
+    resetPassword: ({}, email) => {
+        firebase.auth().sendPasswordResetEmail()
+
+    }
 
     
 };

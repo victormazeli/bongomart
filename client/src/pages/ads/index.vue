@@ -137,23 +137,24 @@
                                     <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
                                         aria-labelledby="nav-grid-tab">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="col-lg-4 col-md-6 col-12" v-for="ad in getAds.docs" :key="ad.id">
                                                 <!-- Start Single Item -->
                                                 <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
+                                                    <div class="image" v-for="image in ad.images" :key="image">
+                                                        <router-link to="/"><img :src="image[0]" alt="#"></router-link>
+                                                        
                                                         <i class=" cross-badge lni lni-bolt"></i>
                                                         <span class="flat-badge sale">Sale</span>
                                                     </div>
                                                     <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Mobile</a>
+                                                        <a href="javascript:void(0)" class="tag">{{ad.category.title}}</a>
                                                         <h3 class="title">
-                                                            <a href="item-details.html">Apple Iphone X</a>
+                                                            <a href="item-details.html">{{ad.title}}</a>
                                                         </h3>
                                                         <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
                                                                 </i>Boston</a></p>
                                                         <ul class="info">
-                                                            <li class="price">$890.00</li>
+                                                            <li class="price">{{ad.price}}</li>
                                                             <li class="like"><a href="javascript:void(0)"><i
                                                                         class="lni lni-heart"></i></a>
                                                             </li>
@@ -162,383 +163,7 @@
                                                 </div>
                                                 <!-- End Single Item -->
                                             </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Others</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Travel Kit</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>San Francisco</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$580.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i
-                                                                        class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Electronic</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Nikon DSLR Camera</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>Alaska, USA</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$560.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i
-                                                                        class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Furniture</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Poster Paint</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>Las Vegas</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$85.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i
-                                                                        class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Furniture</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Official Metting Chair</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>Alaska, USA</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$750.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i
-                                                                        class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge rent">Rent</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Books & Magazine</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Story Book</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>New York, USA</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$120.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i
-                                                                        class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Electronic</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Cctv camera</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>Delhi, India</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$350.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Mobile</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Apple Iphone X</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>Boston</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$890.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i
-                                                                        class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                        <i class=" cross-badge lni lni-bolt"></i>
-                                                        <span class="flat-badge sale">Sale</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">Mobile</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">Samsung Glalaxy S8</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>Delaware, USA</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">$299.00</li>
-                                                            <li class="like"><a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <!-- Pagination -->
-                                                <div class="pagination left">
-                                                    <ul class="pagination-list">
-                                                        <li><a href="javascript:void(0)">1</a></li>
-                                                        <li class="active"><a href="javascript:void(0)">2</a></li>
-                                                        <li><a href="javascript:void(0)">3</a></li>
-                                                        <li><a href="javascript:void(0)">4</a></li>
-                                                        <li><a href="javascript:void(0)"><i class="lni lni-chevron-right"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <!--/ End Pagination -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-list" role="tabpanel"
-                                        aria-labelledby="nav-list-tab">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-5 col-md-7 col-12">
-                                                            <div class="image">
-                                                                <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                                <i class=" cross-badge lni lni-bolt"></i>
-                                                                <span class="flat-badge sale">Sale</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7 col-md-5 col-12">
-                                                            <div class="content">
-                                                                <a href="javascript:void(0)" class="tag">Others</a>
-                                                                <h3 class="title">
-                                                                    <a href="item-details.html">Travel Kit</a>
-                                                                </h3>
-                                                                <p class="location"><a href="javascript:void(0)"><i
-                                                                            class="lni lni-map-marker">
-                                                                        </i>San Francisco</a></p>
-                                                                <ul class="info">
-                                                                    <li class="price">$580.00</li>
-                                                                    <li class="like"><a href="javascript:void(0)"><i
-                                                                                class="lni lni-heart"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-5 col-md-7 col-12">
-                                                            <div class="image">
-                                                                <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                                <i class=" cross-badge lni lni-bolt"></i>
-                                                                <span class="flat-badge sale">Sale</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7 col-md-5 col-12">
-                                                            <div class="content">
-                                                                <a href="javascript:void(0)" class="tag">Electronic</a>
-                                                                <h3 class="title">
-                                                                    <a href="item-details.html">Nikon DSLR Camera</a>
-                                                                </h3>
-                                                                <p class="location"><a href="javascript:void(0)"><i
-                                                                            class="lni lni-map-marker">
-                                                                        </i>Alaska, USA</a></p>
-                                                                <ul class="info">
-                                                                    <li class="price">$560.00</li>
-                                                                    <li class="like"><a href="javascript:void(0)"><i
-                                                                                class="lni lni-heart"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-5 col-md-7 col-12">
-                                                            <div class="image">
-                                                                <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                                <i class=" cross-badge lni lni-bolt"></i>
-                                                                <span class="flat-badge sale">Sale</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7 col-md-5 col-12">
-                                                            <div class="content">
-                                                                <a href="javascript:void(0)" class="tag">Mobile</a>
-                                                                <h3 class="title">
-                                                                    <a href="item-details.html">Apple Iphone X</a>
-                                                                </h3>
-                                                                <p class="location"><a href="javascript:void(0)"><i
-                                                                            class="lni lni-map-marker">
-                                                                        </i>Boston</a></p>
-                                                                <ul class="info">
-                                                                    <li class="price">$890.00</li>
-                                                                    <li class="like"><a href="javascript:void(0)"><i
-                                                                                class="lni lni-heart"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-5 col-md-7 col-12">
-                                                            <div class="image">
-                                                                <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                                <i class=" cross-badge lni lni-bolt"></i>
-                                                                <span class="flat-badge sale">Sale</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7 col-md-5 col-12">
-                                                            <div class="content">
-                                                                <a href="javascript:void(0)" class="tag">Furniture</a>
-                                                                <h3 class="title">
-                                                                    <a href="item-details.html">Poster Paint</a>
-                                                                </h3>
-                                                                <p class="location"><a href="javascript:void(0)"><i
-                                                                            class="lni lni-map-marker">
-                                                                        </i>Las Vegas</a></p>
-                                                                <ul class="info">
-                                                                    <li class="price">$85.00</li>
-                                                                    <li class="like"><a href="javascript:void(0)"><i
-                                                                                class="lni lni-heart"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-5 col-md-7 col-12">
-                                                            <div class="image">
-                                                                <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                                                                <i class=" cross-badge lni lni-bolt"></i>
-                                                                <span class="flat-badge rent">Rent</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7 col-md-5 col-12">
-                                                            <div class="content">
-                                                                <a href="javascript:void(0)" class="tag">Books & Magazine</a>
-                                                                <h3 class="title">
-                                                                    <a href="item-details.html">Story Book</a>
-                                                                </h3>
-                                                                <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                        </i>New York, USA</a></p>
-                                                                <ul class="info">
-                                                                    <li class="price">$120.00</li>
-                                                                    <li class="like"><a href="javascript:void(0)"><i
-                                                                                class="lni lni-heart"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
+                                            
                                         </div>
                                         <div class="row">
                                             <div class="col-12">
@@ -568,8 +193,25 @@
     </div>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-    name: "Listings"
+    name: "Listings",
+    data() {
+        return {
+            
+        }
+    },
+    computed: {
+        ...mapGetters(['getAds']),
+    },
+    methods: {
+        ...mapActions(['getAllAds'])
+        
+    },
+   created() {
+       this.getAllAds();
+       
+   },
     
 }
 </script>

@@ -12,10 +12,10 @@ const { dataUri } = require('../middleware/upload');
 
 exports.index = asyncHandler(async (req, res) => {
 
-    const { title, price, condition, category, page } = req.query;
+    const { title, price, condition, category, page, limit, tags } = req.query;
     const options = {
         page: page,
-        limit: 20,
+        limit: limit || 20,
         sort: { createdAt: -1 },
         populate:['category', 'owner']
     };
@@ -63,6 +63,16 @@ exports.index = asyncHandler(async (req, res) => {
 
     if (category) {
         const getAllAds = await Ads.paginate({category: category }, options);
+
+    if (!getAllAds) {
+       return new ErrorResponse('No Ads found', 404);
+    }
+    return  res.status(200).json({success: true, data: getAllAds});
+        
+    }
+
+    if (tags) {
+        const getAllAds = await Ads.paginate({tags: {$in: [`${tags}`] } }, options);
 
     if (!getAllAds) {
        return new ErrorResponse('No Ads found', 404);
