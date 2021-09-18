@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 
 const BookmarkAdSchema = new mongoose.Schema({
@@ -18,6 +19,7 @@ const BookmarkAdSchema = new mongoose.Schema({
   },
 });
 
+BookmarkAdSchema.plugin(mongoosePaginate);
 module.exports = mongoose.model("BookmarkAd", BookmarkAdSchema);
 
 

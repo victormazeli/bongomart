@@ -234,16 +234,16 @@ exports.bookmarkAd = asyncHandler(async (req, res) => {
 });
 
 exports.getBookmarkAds = asyncHandler(async (req, res) => {
-    const { userId } = req.query;
-
-    const options = {
-        select: 'title, category, condition',
         sort: {createdAt: -1 },
         populate: 'category',
         offset: 20,
         limit: 10
     };
+ const { userId } = req.query;
 
+    const options = {
+        select: 'title, category, condition',
+   
     const getAd = await BookmarkAd.paginate({owner: userId }, options);
 
     if (!getAd) {

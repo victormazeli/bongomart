@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 
 const SubscriptionSchema = new mongoose.Schema({
@@ -12,11 +13,10 @@ const SubscriptionSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
+  expiryDate: Date
 });
+
+SubscriptionSchema.plugin(mongoosePaginate);
 
 module.exports = mongoose.model("Subscription", SubscriptionSchema);
 

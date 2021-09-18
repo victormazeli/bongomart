@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const mongoosePaginate = require('mongoose-paginate-v2');
  
 const UserSchema = new mongoose.Schema({
 
@@ -48,20 +49,11 @@ const UserSchema = new mongoose.Schema({
             'Please add a valid mail'
         ]
     },
-    role: {
-        type: String,
-        enum: ['user', 'admin'],
-        default: 'user'
-    },
-    is_disabled: {
+    suspended: {
         type: Boolean,
         default: false
     },
-    vip: {
-        type: Boolean,
-        default: false
-    },
-    premium: {
+    subscribed: {
         type: Boolean,
         default: false
     },
@@ -73,6 +65,7 @@ const UserSchema = new mongoose.Schema({
     // },
     // resetPasswordToken: String,
     // resetPassordExpire: Date,
+    subscriptionDate: Date,
     createdAt: {
         type: Date,
         default: Date.now
@@ -101,5 +94,6 @@ const UserSchema = new mongoose.Schema({
 //     return 
 // }
 
+UserSchema.plugin(mongoosePaginate);
 module.exports = mongoose.model('User', UserSchema);
 
