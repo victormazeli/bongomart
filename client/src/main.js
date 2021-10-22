@@ -5,14 +5,24 @@ import routes from './routes/route'
 import firebase from 'firebase/app'
 import axios from 'axios'
 import store from './store/index'
-import Flutterwave from  'flutterwave-vue-v3'
+import VuePaginate from 'vue-paginate'
+// import { BootstrapVue } from 'bootstrap-vue'
+
+// // Import Bootstrap an BootstrapVue CSS files (order is important)
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// import Flutterwave from  'flutterwave-vue-v3'
 
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
+// Make BootstrapVue available throughout your project
+// Vue.use(BootstrapVue)
+Vue.use(VuePaginate);
 Vue.prototype.$http = axios;
-Vue.use(Flutterwave, { publicKey: 'FLWPUBK-4a387f1c9037911ac35f7b8d330ccbb4-X' } )
+// Vue.use(Flutterwave, { publicKey: 'FLWPUBK-4a387f1c9037911ac35f7b8d330ccbb4-X' } )
 
 const router = new VueRouter({
   mode: 'history',

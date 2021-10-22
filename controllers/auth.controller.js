@@ -16,23 +16,37 @@ exports.loginController = asyncHandler(async (req, res, next) => {
 
     const user = await User.findOne({ uid });
 
-    // console.log(user);
+    console.log(user);
 
     if (!user) {
         return next(
             new ErrorResponse('User not valid', 404)
         );
     }
-
     // const isMatch = await bcrypt.compare(password, user.password);
 
-    // // console.log(isMatch);
+    // console.log(isMatch);
 
     // if(!isMatch) {
     //     return next(
     //         new ErrorResponse('Invalid password', 404)
     //     );
     // }
+    // ensure to test this feature 
+    let dateString = user.subscriptionDate;
+    if(dateString){
+        const startSubscriptionDate = new Date(dateString);
+        const checkEndSubscription = new Date();
+        checkEndSubscription.setDate(startSubscriptionDate.getDate() + 30);
+        const diff = Math.abs(checkEndSubscription.getTime() - startSubscriptionDate.getTime());
+        const result = Math.ceil(diff / (1000 * 3600 * 24));
+        if (result >= 30 && !user.subscribed) {
+            const revokeUserSubscription = await User.findByIdAndUpdate(user.id, {subscribed: false}, {new: true});
+            
+        }
+
+    }
+   
 
     sendTokenResponse(user, 200, res);
         
@@ -44,7 +58,7 @@ exports.loginController = asyncHandler(async (req, res, next) => {
 exports.registerController = asyncHandler(async (req, res, next) => {
     const { authToken } = req.body;
 
-    console.log(authToken);
+    // console.log(authToken);
 
     const { email, email_verified, picture, phone_number, uid } = await firebase.auth().verifyIdToken(authToken);
 
@@ -55,9 +69,9 @@ exports.registerController = asyncHandler(async (req, res, next) => {
             new ErrorResponse('This user already exist')
         );
     }
+    // const hash = await bcrypt.hash( password, 10);
 
-
-    const user = await User.create({email, email_verified, picture, phone_number, uid });
+    const user = await User.create({ email, picture, phone_number, uid });
 
     if(!user){
         return new ErrorResponse('Could not create this user');

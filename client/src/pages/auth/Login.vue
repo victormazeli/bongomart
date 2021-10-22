@@ -58,9 +58,9 @@
                             </div>
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Login With
+                                    <li><a  class="facebook"><i class="lni lni-facebook-original" @click="facebookLogin"></i>Login With
                                             Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Login With Google
+                                    <li><a class="google" @click="googleLogin"><i class="lni lni-google"></i>Login With Google
                                             Plus</a>
                                     </li>
                                 </ul>
@@ -77,7 +77,7 @@
     </div>
 </template>
 <script>
-import firebase from "firebase";
+import {mapGetters, mapActions} from 'vuex';
 
 export default {
     name: "Login",
@@ -89,22 +89,20 @@ export default {
             }
         }
     },
+    computed: {
+        ...mapGetters(['isLoggedIn'])
+    },
     methods: {
-        submit() {
-            firebase
-            .auth()
-            .signInWithEmailAndPassword(this.form.email, this.form.password)
-            .then(data => data.user.getIdToken(true)
-            .then(idToken => {
-                this.$http.post("http://localhost:5000/api/auth/login", {authToken: idToken}).then((response) => {
-                    console.log(response.data);
-                })
-            })
-            .catch(err => console.log(err))
-            )
-            .catch(err => console.log(err))
+        ...mapActions(['login', 'facebookLogin', 'googleLogin']),
+
+        submit(){
+            let email = this.form.email;
+            let password = this.form.password;
+
+            this.login({email, password})
 
         }
+        
     },
 }
 </script>

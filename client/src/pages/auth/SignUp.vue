@@ -30,20 +30,18 @@
                         <form action="#" @submit.prevent="submit">
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Import
-                                            From Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Import From Google
-                                            Plus</a>
+                                    <li><a @click="facebookSignUp" class="facebook"><i class="lni lni-facebook-original"></i>Facebook</a></li>
+                                    <li><a @click="googleSignUp" class="google"><i class="lni lni-google"></i>Google Plus</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="alt-option">
                                 <span>Or</span>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>Name</label>
                                 <input name="password" type="text" required v-model="form.name">
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label>Email</label>
                                 <input name="email" type="email" required v-model="form.email">
@@ -84,7 +82,7 @@
     </div>
 </template>
 <script>
-import firebase from "firebase";
+import {mapGetters, mapActions} from "vuex"
 
 export default {
     name: "Register",
@@ -98,23 +96,20 @@ export default {
             
         }
     },
+    computed: {
+        ...mapGetters(['isLoggedIn'])
+    },
     methods: {
-        submit() {
-            firebase
-            .auth()
-            .createUserWithEmailAndPassword(this.form.email, this.form.password)
-            .then(data => data.user.getIdToken(true)
-            .then(idtoken => {
-                this.$http.post("http://localhost:5000/api/auth/register", {authToken: idtoken}).then((response) => {
-                    console.log(response.data);
-                })
-            })
-            .catch(err => console.log(err))
-            )
-            .catch(err =>{
-                console.log(err);
-            });
+        ...mapActions(['facebookSignUp', 'googleSignUp', 'register']),
+
+        submit(){
+            let email = this.form.email;
+            let password = this.form.password
+
+            this.register({email, password});
+
         }
+       
     },
 }
 </script>

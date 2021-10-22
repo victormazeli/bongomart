@@ -9,11 +9,15 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^5.1.3",
+    "bootstrap-vue": "^2.21.2",
+    "cloudinary": "^1.27.0",
     "core-js": "^3.6.5",
     "firebase": "^8.9.1",
     "flutterwave-vue-v3": "^1.0.5",
     "vue": "^2.6.11",
     "vue-axios": "^3.2.5",
+    "vue-paginate": "^3.6.0",
     "vue-router": "^3.5.2",
     "vuex": "^3.6.2"
   },

@@ -1,0 +1,187 @@
+[
+    {
+        "state": "Abia",
+        "id": 1,
+        "lgas": []
+    },
+    {
+        "state": "Adamawa",
+        "id": 2,
+        "lgas": []
+    },
+    {
+        "state": "Akwa Ibom",
+        "id": 3,
+        "lgas": []
+    },
+    {
+        "state": "Anambra",
+        "id": 4,
+        "lgas": []
+    },
+    {
+        "state": "Bauchi",
+        "id": 5,
+        "lgas": []
+    },
+    {
+        "state": "Benue",
+        "id": 6,
+        "lgas": []
+    },
+    {
+        "state": "Borno",
+        "id": 7,
+        "lgas": []
+    },
+    {
+        "state": "Bayelsa",
+        "id": 8,
+        "lgas": []
+    },
+    {
+        "state": "Cross River",
+        "id": 9,
+        "lgas": []
+    },
+    {
+        "state": "Delta",
+        "id": 10,
+        "lgas": []
+    },
+    {
+        "state": "Ebonyi",
+        "id": 11,
+        "lgas": []
+    },
+    {
+        "state": "Edo",
+        "id": 12,
+        "lgas": []
+    },
+    {
+        "state": "Ekiti",
+        "id": 13,
+        "lgas": []
+    },
+    {
+        "state": "Enugu",
+        "id": 14,
+        "lgas": []
+    },
+    {
+        "state": "Federal Capital Territory",
+        "id": 15,
+        "lgas": []
+    },
+    {
+        "state": "Gombe",
+        "id": 16,
+        "lgas": []
+    },
+    {
+        "state": "Imo",
+        "id": 17,
+        "lgas": []
+    },
+    {
+        "state": "Jigawa",
+        "id": 18,
+        "lgas": []
+    },
+    {
+        "state": "Kebbi",
+        "id": 19,
+        "lgas": []
+    },
+    {
+        "state": "Kaduna",
+        "id": 20,
+        "lgas": []
+    },
+    {
+        "state": "Kano",
+        "id": 21,
+        "lgas": []
+    },
+    {
+        "state": "Kogi",
+        "id": 22,
+        "lgas": []
+    },
+    {
+        "state": "Katsina",
+        "id": 23,
+        "lgas": []
+    },
+    {
+        "state": "Kwara",
+        "id": 24,
+        "lgas": []
+    },
+    {
+        "state": "Lagos",
+        "id": 25,
+        "lgas": []
+    },
+    {
+        "state": "Nasarawa",
+        "id": 26,
+        "lgas": []
+    },
+    {
+        "state": "Niger",
+        "id": 27,
+        "lgas": []
+    },
+    {
+        "state": "Ogun",
+        "id": 28,
+        "lgas": []
+    },
+    {
+        "state": "Ondo",
+        "id": 29,
+        "lgas": []
+    },
+    {
+        "state": "Osun",
+        "id": 30,
+        "lgas": []
+    },
+    {
+        "state": "Oyo",
+        "id": 31,
+        "lgas": []
+    },
+    {
+        "state": "Plateau",
+        "id": 32,
+        "lgas": []
+    },
+    {
+        "state": "Rivers",
+        "id": 33,
+        "lgas": []
+    },
+    {
+        "state": "Sokoto",
+        "id": 34,
+        "lgas": []
+    },
+    {
+        "state": "Taraba",
+        "id": 35,
+        "lgas": []
+    },
+    {
+        "state": "Yobe",
+        "id": 36,
+        "lgas": []
+    },
+    {
+        "state": "Zamfara",
+        "id": 37,
+        "lgas": []
+    }
+]

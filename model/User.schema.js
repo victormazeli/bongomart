@@ -4,18 +4,18 @@ const mongoosePaginate = require('mongoose-paginate-v2');
  
 const UserSchema = new mongoose.Schema({
 
-    firstname: {
+    name: {
         type: String,
         // required: [true, 'Please enter your name'],
         maxlength: 30
 
     },
-    lastname: {
-        type: String,
-        // required: [true, 'Please enter your name'],
-        maxlength: 30
+    // lastname: {
+    //     type: String,
+    //     // required: [true, 'Please enter your name'],
+    //     maxlength: 30
 
-    },
+    // },
 
     username: {
         type: String,
@@ -31,6 +31,14 @@ const UserSchema = new mongoose.Schema({
     email_verified: {
         type: Boolean
     },
+    role: {
+        type: String,
+        enum: ['user', 'admin'],
+        default: 'user'
+    },
+    // provider: {
+    //     type: String
+    // },
 
     phone_number: {
         type: String
@@ -57,15 +65,16 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    // password:{
-    //     type: String,
-    //     required: [true, 'Please enter a password'],
-    //     minlength: 6,
-    //     select: false
-    // },
+    password:{
+        type: String,
+        minlength: 6,
+        select: false
+    },
+    subscriptionDate: Date,
+
     // resetPasswordToken: String,
     // resetPassordExpire: Date,
-    subscriptionDate: Date,
+    // subscriptionDate: Date,
     createdAt: {
         type: Date,
         default: Date.now

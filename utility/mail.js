@@ -15,10 +15,11 @@ const mg = new Mailgun({
 // 	subject: 'Hello',
 // 	text: 'Testing some Mailgun awesomness!'
 // };
-
-exports.sendMail = (data) => {
+const sendMail = (data) => {
   mg.messages().send(data, function (error, body) {
     console.log(body);
   });
 };
+
+module.exports =sendMail;
 

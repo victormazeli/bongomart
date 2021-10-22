@@ -13,7 +13,12 @@ const SubscriptionSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  expiryDate: Date
+  expiryDate: Date,
+  
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 SubscriptionSchema.plugin(mongoosePaginate);

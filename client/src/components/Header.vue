@@ -118,7 +118,7 @@
                                     </li>
                                     <li>
                                         <!-- <a href="registration.html"> Register</a> -->
-                                        <router-link to="/register" ><i class="lni lni-user"></i>Register</router-link>
+                                        <router-link to="/signUp" ><i class="lni lni-user"></i>Register</router-link>
                                     </li>
                                 </ul>
                             </div>

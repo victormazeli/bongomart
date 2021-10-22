@@ -28,8 +28,8 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-images">
                             <main id="gallery">
-                                <div class="main-img">
-                                    <img src="https://via.placeholder.com/1200x900" id="current" alt="#">
+                                <div class="main-img" v-if="getAdDetail.images">
+                                    <img :src="getAdDetail.images[0]" id="current" alt="#">
                                 </div>
                                 <div class="images">
                                     <img src="https://via.placeholder.com/1200x900" class="img" alt="#">
@@ -43,17 +43,19 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-info">
-                            <h2 class="title">MacBook Pro 13-inch</h2>
-                            <p class="location"><i class="lni lni-map-marker"></i><a href="javascript:void(0)">New York, USA</a></p>
-                            <h3 class="price">$999</h3>
-                            <div class="list-info">
+                            <h2 class="title">{{getAdDetail.title}}</h2>
+                            <div v-if="getAdDetail.lga && getAdDetail.state">
+                                <p class="location" ><i class="lni lni-map-marker"></i><a href="javascript:void(0)">{{getAdDetail.lga.lga}}, {{getAdDetail.state.name}}</a></p>
+                            </div>
+                            <h3 class="price">{{getAdDetail.price | currency }}</h3>
+                            <!-- <div class="list-info">
                                 <h4>Informations</h4>
                                 <ul>
-                                    <li><span>Condition:</span> New</li>
+                                    <li><span>Condition:</span> {{getAdDetail.condition}}</li>
                                     <li><span>Brand:</span> Apple</li>
                                     <li><span>Model:</span> Mackbook Pro</li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <div class="contact-info">
                                 <ul>
                                     <li>
@@ -64,13 +66,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="mailto:example@gmail.com" class="mail">
+                                        <a :href="mailAddress" class="mail">
                                             <i class="lni lni-envelope"></i>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="social-share">
+                            <!-- <div class="social-share">
                                 <h4>Share Ad</h4>
                                 <ul>
                                     <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-filled"></i></a></li>
@@ -79,7 +81,7 @@
                                     <li><a href="javascript:void(0)" class="linkedin"><i class="lni lni-linkedin-original"></i></a></li>
                                     <li><a href="javascript:void(0)" class="pinterest"><i class="lni lni-pinterest"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -91,11 +93,9 @@
                         <div class="single-block description">
                             <h3>Description</h3>
                             <p>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable.
+                                {{getAdDetail.description}}
                             </p>
-                            <ul>
+                            <!-- <ul>
                                 <li>Model: Apple MacBook Pro 13.3-Inch MYDA2</li>
                                 <li>Apple M1 chip with 8-core CPU and 8-core GPU</li>
                                 <li>8GB RAM</li>
@@ -103,17 +103,17 @@
                                 <li>13.3-inch 2560x1600 LED-backlit Retina Display</li>
                             </ul>
                             <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
-                                non-characteristic words etc.</p>
+                                non-characteristic words etc.</p> -->
                         </div>
                         <!-- End Single Block -->
                         <!-- Start Single Block -->
-                        <div class="single-block tags">
+                        <div class="single-block tags" v-if="getAdDetail.tags">
                             <h3>Tags</h3>
                             <ul>
-                                <li><a href="javascript:void(0)">Bike</a></li>
-                                <li><a href="javascript:void(0)">Services</a></li>
+                                <li v-for="tag in getAdDetail.tags" :key="tag"><a href="javascript:void(0)">{{tag}}</a></li>
+                                <!-- <li><a href="javascript:void(0)">Services</a></li>
                                 <li><a href="javascript:void(0)">Brand</a></li>
-                                <li><a href="javascript:void(0)">Popular</a></li>
+                                <li><a href="javascript:void(0)">Popular</a></li> -->
                             </ul>
                         </div>
                         <!-- End Single Block -->
@@ -225,3 +225,53 @@
     <!-- End Item Details -->
     </div>
 </template>
+
+<script>
+import { mapGetters, mapActions } from 'vuex'
+export default {
+    name: "Listing-detail",
+    data() {
+        return {
+            
+        }
+    },
+        filters: {
+        currency: (amount ) => {
+            let formatter = new Intl.NumberFormat('NGN', {
+                style: 'currency', 
+                currency: 'NGN', 
+                minimumFractionDigits: 2 
+                });
+            return formatter.format(amount);
+        }
+    },
+    computed: {
+        ...mapGetters(['getAdDetail']),
+        mailAddress(){
+            let email;
+            if (this.getAdDetail.owner) {
+                const prefix = "mailto:";
+                const mail = this.getAdDetail.owner.email;
+                email = prefix + mail;
+            }
+
+            return email;
+        
+        }
+
+
+    },
+    methods: {
+        ...mapActions(['getDetailAds']),
+        
+
+        
+    },
+    created() {
+        const id = this.$route.params.id;
+        this.getDetailAds(id);
+        
+        
+    },
+}
+</script>
