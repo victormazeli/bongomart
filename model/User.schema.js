@@ -1,20 +1,21 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const mongoosePaginate = require('mongoose-paginate-v2');
  
 const UserSchema = new mongoose.Schema({
 
-    firstname: {
+    name: {
         type: String,
         // required: [true, 'Please enter your name'],
         maxlength: 30
 
     },
-    lastname: {
-        type: String,
-        // required: [true, 'Please enter your name'],
-        maxlength: 30
+    // lastname: {
+    //     type: String,
+    //     // required: [true, 'Please enter your name'],
+    //     maxlength: 30
 
-    },
+    // },
 
     username: {
         type: String,
@@ -30,6 +31,14 @@ const UserSchema = new mongoose.Schema({
     email_verified: {
         type: Boolean
     },
+    role: {
+        type: String,
+        enum: ['user', 'admin'],
+        default: 'user'
+    },
+    // provider: {
+    //     type: String
+    // },
 
     phone_number: {
         type: String
@@ -48,31 +57,24 @@ const UserSchema = new mongoose.Schema({
             'Please add a valid mail'
         ]
     },
-    role: {
+    suspended: {
+        type: Boolean,
+        default: false
+    },
+    subscribed: {
+        type: Boolean,
+        default: false
+    },
+    password:{
         type: String,
-        enum: ['user', 'admin'],
-        default: 'user'
+        minlength: 6,
+        select: false
     },
-    is_disabled: {
-        type: Boolean,
-        default: false
-    },
-    vip: {
-        type: Boolean,
-        default: false
-    },
-    premium: {
-        type: Boolean,
-        default: false
-    },
-    // password:{
-    //     type: String,
-    //     required: [true, 'Please enter a password'],
-    //     minlength: 6,
-    //     select: false
-    // },
+    subscriptionDate: Date,
+
     // resetPasswordToken: String,
     // resetPassordExpire: Date,
+    // subscriptionDate: Date,
     createdAt: {
         type: Date,
         default: Date.now
@@ -101,5 +103,6 @@ const UserSchema = new mongoose.Schema({
 //     return 
 // }
 
+UserSchema.plugin(mongoosePaginate);
 module.exports = mongoose.model('User', UserSchema);
 

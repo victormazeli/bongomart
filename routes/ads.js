@@ -17,7 +17,8 @@ const {
     suspendAd,
     uploadImage,
     unSuspendAd,
-    createCategory
+    createCategory,
+    getCategories
 } = require('../controllers/ads.controller')
 
 router.route('/')
@@ -26,11 +27,11 @@ router.route('/')
 
 router.get('/homeAds', getLimitedAds);
 
-router.post('/category', createCategory);
+router.route('/category').get(getCategories).post(createCategory);
 
 router.get('/detailAd/:id',  show);
 
-router.put('/editAd/:id', protect, edit);
+router.put('/editAd/:id', edit);
 
 router.put('/upload/:id', multerUploads, uploadImage);
 

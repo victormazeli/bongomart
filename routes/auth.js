@@ -8,6 +8,7 @@ const {
     forgotPasswordController, 
     meController 
 } = require('../controllers/auth.controller');
+const passport = require('passport');
 
 
 
@@ -22,6 +23,16 @@ router.get('/me', protect, meController);
 router.post('/forgotPassword', forgotPasswordController);
 
 router.put('/resetpassword/:resettoken', resetPasswordController);
+
+// router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'], session: false }));
+// router.get('/google/redirect', passport.authenticate('google', { session: false, failureRedirect: `https://localhost:3000/login` }), (req, res) => {
+//   res.redirect(req.user); //req.user has the redirection_url
+// });
+
+// router.get('/facebook', passport.authenticate('facebook', { scope: ['profile', 'email'], session: false }));
+// router.get('/facebook/redirect', passport.authenticate('facebook', { session: false, failureRedirect: `https://localhost:3000/login` }), (req, res) => {
+//   res.redirect(req.user); //req.user has the redirection_url
+// });
 
 
 // router.post('/register', async(req, res) => {

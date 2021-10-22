@@ -6,8 +6,9 @@ const ErrorResponse = require('../utility/errorResponse');
 const asyncHandler = require('../middleware/async');
 // const crypto = require('crypto');
 // const { sendMail } = require('../utility/mail');
-const { uploader  } = require('../middleware/cloudinary');
+const { uploader, cloudinaryConfig  } = require('../middleware/cloudinary');
 const { dataUri } = require('../middleware/upload');
+
 
 
 exports.index = asyncHandler(async (req, res) => {
@@ -15,9 +16,9 @@ exports.index = asyncHandler(async (req, res) => {
     const { title, price, condition, category, page, limit, tags } = req.query;
     const options = {
         page: page,
-        limit: limit || 20,
+        limit: limit || 15,
         sort: { createdAt: -1 },
-        populate:['category', 'owner']
+        populate:['category', 'owner', 'state', 'lga']
     };
     
     if (title) {
@@ -60,6 +61,7 @@ exports.index = asyncHandler(async (req, res) => {
         
     }
 
+    
 
     if (category) {
         const getAllAds = await Ads.paginate({category: category }, options);
@@ -110,10 +112,13 @@ exports.getLimitedAds = asyncHandler(async (req, res) => {
 exports.create = asyncHandler(async (req, res) => {
 
     const newAd = await Ads.create(req.body);
+    const catId = req.body['category'];
 
     if (!newAd){
         new ErrorResponse('something went wrong creating ad', 404);
     }
+
+    const updateCategoryAdsCount = await Category.findByIdAndUpdate(catId, {numberOfAds: +1}, {new: true});
 
 
     return res.status(201).json({success: true, data: newAd});
@@ -125,7 +130,7 @@ exports.createCategory = asyncHandler(async (req, res) => {
     const newCategory = await Category.create(req.body);
 
     if (!newCategory){
-        new ErrorResponse('something went wrong creating ad', 404);
+        new ErrorResponse('something went wrong creating category', 404);
     }
 
 
@@ -133,10 +138,23 @@ exports.createCategory = asyncHandler(async (req, res) => {
 
 });
 
+exports.getCategories = asyncHandler(async (req, res) => {
+
+    const categories = await Category.find({});
+
+    if (!categories){
+        new ErrorResponse('something went wrong getting categories', 404);
+    }
+
+
+    return res.status(201).json({success: true, data: categories});
+
+});
+
 exports.show = asyncHandler(async (req, res) => {
     const { id } = req.params
 
-    const getAd = await Ads.findById(id).populate('category').populate('owner');
+    const getAd = await Ads.findById(id).populate(['category', 'owner', 'lga', 'state']);
 
     if (!getAd){
         new ErrorResponse('No Ad Found', 404);
@@ -197,9 +215,9 @@ exports.uploadImage = asyncHandler(async (req, res) => {
     const { id } = req.params;
     if (req.file) {
         const file = await dataUri(req);
-        const result = await uploader.upload(file.content, {folder: "ads" });
-        console.log(result);
-        console.log(result.url);
+        const result = await uploader.upload(file.content, {folder: "ads", width: 600, height: 400, crop: "fill"});
+        // console.log(result);
+        // console.log(result.url);
         const imageUrl = result.url;
 
         console.log(imageUrl);
@@ -234,7 +252,7 @@ exports.bookmarkAd = asyncHandler(async (req, res) => {
 });
 
 exports.getBookmarkAds = asyncHandler(async (req, res) => {
-    const { userId } = req.query;
+ const { userId } = req.query;
 
     const options = {
         select: 'title, category, condition',
@@ -243,7 +261,7 @@ exports.getBookmarkAds = asyncHandler(async (req, res) => {
         offset: 20,
         limit: 10
     };
-
+   
     const getAd = await BookmarkAd.paginate({owner: userId }, options);
 
     if (!getAd) {

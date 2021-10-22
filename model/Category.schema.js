@@ -7,6 +7,11 @@ const CategorySchema = new mongoose.Schema({
         trim: true,
         required: [true, 'Please enter a vaild title']
     },
+    numberOfAds: {
+        type: Number,
+        default: 0,
+    },
+
     createdAt: {
         type: Date,
         default: Date.now

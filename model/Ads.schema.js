@@ -20,7 +20,7 @@ const AdSchema = new mongoose.Schema({
   },
   tags: {
     type: [String],
-    enum: ["New", "Popular", "latest"],
+    enum: ["New", "Popular", "Latest"],
     default: "New"
   },
   slug: {
@@ -46,6 +46,14 @@ const AdSchema = new mongoose.Schema({
   is_favourite: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
+  },
+  state: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Location",
+  },
+  lga: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "StateLgas",
   },
 
   status: {
